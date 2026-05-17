@@ -1,0 +1,12 @@
+export function formatCurrency(amount, currency = 'USD') {
+  return new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency,
+    minimumFractionDigits: 0,
+    maximumFractionDigits: 2,
+  }).format(amount)
+}
+
+export function formatNumber(num) {
+  return new Intl.NumberFormat('en-US').format(num)
+}
